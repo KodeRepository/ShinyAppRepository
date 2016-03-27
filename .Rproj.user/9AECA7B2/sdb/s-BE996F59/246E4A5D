@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shiny)\nlibrary(datasets)\n\n# \"World Phones\" dataset, Preloaded with R  \n\ncolors = c(\"red\", \"yellow\", \"green\", \"violet\",\"orange\", \"blue\", \"pink\", \"cyan\")\n\n# Define a server for the Shiny app\nshinyServer(function(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot <- renderPlot({\n    \n    # Render a barplot\n    barplot(WorldPhones[,input$region], \n            main=input$region,\n            ylab=\"Number of Telephones\",col = colors,\n            xlab=\"Year\")\n  })\n})",
+    "created" : 1459110899408.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1527146369",
+    "id" : "246E4A5D",
+    "lastKnownWriteTime" : 1459011161,
+    "last_content_update" : 1459011161,
+    "path" : "E:/Books/Data Science/ShinyDataProduct/server.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

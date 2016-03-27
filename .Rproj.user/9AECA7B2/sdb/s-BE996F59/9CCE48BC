@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shiny)\n\n# \"World Phones\" dataset, Preloaded with R  \n\nlibrary(datasets)\n\n# Define the overall UI\nshinyUI(\n  \n  # Use a fluid Bootstrap layout\n  fluidPage(    \n    \n    # Give the page a title\n    titlePanel(\"Telephones By World Regions (1951 - 1961)\"),\n    \n    # Generate a row with a sidebar\n    sidebarLayout(      \n      \n      # Define the sidebar with one input\n      sidebarPanel(\n        selectInput(\"region\", \"Region\", \n                    choices=colnames(WorldPhones)),\n        hr(),\n        helpText(\"Please Select a Region to View the Telephone Count. Count of Telephones is displayed as a Bar Chart ==>\")\n      ),\n      \n      # Create a spot for the barplot\n      mainPanel( \n        plotOutput(\"phonePlot\")\n      )\n      \n    )\n  )\n)",
+    "created" : 1459110847665.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1469230936",
+    "id" : "9CCE48BC",
+    "lastKnownWriteTime" : 1459110975,
+    "last_content_update" : 1459110975310,
+    "path" : "E:/Books/Data Science/App Two/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
